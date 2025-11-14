@@ -34,7 +34,7 @@ def server_live():
     return ServerStatus(status="Success", message="Server is live!")
 
 
-@app.get("/heath", response_model=ServerStatus, status_code=200)
+@app.get("/health", response_model=ServerStatus, status_code=200)
 def server_health():
     return ServerStatus(status="Healthy", message="Server is working perfectly")
 
