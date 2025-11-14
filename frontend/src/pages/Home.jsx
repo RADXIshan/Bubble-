@@ -1,4 +1,3 @@
-// frontend/src/pages/Home.jsx
 import { useEffect, useState } from 'react'
 import api from '../utils/api'
 
@@ -20,8 +19,11 @@ const Home = () => {
     return () => { cancelled = true }
   }, [])
 
-  if (error) return <div role="alert" className="text-red-600">{error}</div>
-  return <div className="text-4xl font-bold text-green-600 text-center mt-10">{message || 'Loading...'}</div>
+  return (
+    <div className="container mx-auto">
+      <div className="text-4xl font-bold text-green-600 text-center mt-10">{message || 'Loading...'}</div>
+    </div>
+  )
 }
 
 export default Home
